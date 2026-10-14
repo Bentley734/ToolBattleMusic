@@ -42,6 +42,7 @@ local choices = {{'Original','original'}, {'Random','random'},
   {"You Lied","you_lied"},
 }
 return {
+  {key='locations',label='OUTSIDE BATTLE',type='choice',default='curated',choices={{'Original','original'},{'Area Defaults','curated'},{'Random','random'}}},
   {key='regular',label='REGULAR BATTLES',type='choice',default='random',choices=choices},
   {key='gym',label='GYM LEADERS',type='choice',default='aenima',choices=choices},
   {key='league',label='POKEMON LEAGUE',type='choice',default='eulogy',choices=choices},

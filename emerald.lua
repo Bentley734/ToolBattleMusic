@@ -1,5 +1,5 @@
 -- Emerald has its own M4A audio bus; GB music.select never reaches it.
-return function(mod,choose,reset,active,assets)
+return function(mod,choose,reset,active,assets,currentMap)
   local Audio=require('src.core.game3.audio')
   local source, selected, cue, suspended
   local roleCategory
@@ -29,6 +29,14 @@ return function(mod,choose,reset,active,assets)
       end
     end
   end
+  local function specialCue(id)
+    local resolved=Audio.resolveSong(id)
+    for name,value in pairs(Audio.songs())do
+      if value==resolved and (name:find('VICTORY',1,true) or name:find('EVOLUTION',1,true)
+        or name:find('TITLE',1,true) or name:find('OPENING',1,true) or name:find('ENDING',1,true))then return true end
+    end
+    return false
+  end
   local function sync()
     if not source then return end
     if not active() then stop();reset();return end
@@ -52,8 +60,15 @@ return function(mod,choose,reset,active,assets)
     if (opts and opts.fanfare) or (Audio.songInfo(Audio.resolveSong(id)) or {}).kind=='fanfare' then
       local result=play(id,opts);sync();return result
     end
-    if not group then roleCategory=nil;stop();reset();return play(id,opts) end
-    local key=group..':'..tostring(Audio.resolveSong(id))
+    if not group then
+      roleCategory=nil
+      local battle=require('src.core.game3.battle')
+      local resolved=Audio.resolveSong(id)
+      if currentMap() and resolved and resolved~=0 and resolved~=0xFFFF and not battle.isActive() and not specialCue(id) then group='locations' end
+    end
+    if not group then stop();reset();return play(id,opts)end
+    if group=='locations' and cue and not cue:match('^locations:')then reset()end
+    local key=group=='locations' and ('locations:'..tostring(currentMap())) or group..':'..tostring(Audio.resolveSong(id))
     local song=choose(group,key)
     local asset=song and assets:source(song)
     local result=play(id,opts)
@@ -68,6 +83,17 @@ return function(mod,choose,reset,active,assets)
     sync()
     return result
   end
+  -- Adjacent maps can share a native cue. Re-evaluate the area even when the
+  -- engine's seamless-map policy leaves that original cue playing unchanged.
+  local mapLoad=Audio.mapLoadMusic
+  if mapLoad then Audio.mapLoadMusic=function(info,...)
+    local result=mapLoad(info,...)
+    if active() and mod.options:get('locations')~='original' then
+      local id=Audio.currentMapMusic()
+      if id and id~=0 then Audio.playSong(id)end
+    end
+    return result
+  end end
   for _,name in ipairs({'update','pumpBgm','applyEngineOptions','applyGain','pauseBgm','resumeBgm','playFanfare','setHelpActive'}) do
     local original=Audio[name]
     if original then Audio[name]=function(...)

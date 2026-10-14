@@ -14,18 +14,7 @@ return function(mod)
     end
   end
   mod.options:define(schema)
-  local cached, last = {}, {}
-  local function reset() cached = {} end
-  local function choose(category,key)
-    local option=mod.options:get(category)
-    if option~='random' then return ids[option] and option or nil end
-    if not cached[key] then
-      local index=math.random(last[category] and #songs-1 or #songs)
-      if last[category] and index>=last[category] then index=index+1 end
-      last[category]=index;cached[key]=songs[index][2]
-    end
-    return cached[key]
-  end
+  local choose,reset,currentMap=assert(load(assert(mod:read('playlist.lua'))))()(mod,songs,assets)
   local decorate=assert(load(assert(mod:read('settings.lua')),'@ToolBattleMusic/settings.lua'))()(mod,schema,reset,assets.manager)
   local marker=function(next,game,rows) return decorate(next(game,rows),game) end
   mod.hooks:wrap('ui.options.rows',marker)
@@ -36,6 +25,8 @@ return function(mod)
     end
     return false
   end
+  mod.events:on('battle.ended',reset)
+  mod.events:on('mod.options_changed',function(ctx)if ctx.mod==mod.id then reset()end end)
   if mod.generation==3 then
     local Rows=require('src.ui.game3.option_rows')
     local build=Rows.build
@@ -43,24 +34,22 @@ return function(mod)
       local out=build(ctx,...)
       return active() and decorate(out,ctx and ctx.game) or out
     end
-    assert(load(assert(mod:read('emerald.lua')),'@ToolBattleMusic/emerald.lua'))()(mod,choose,reset,active,assets)
+    assert(load(assert(mod:read('emerald.lua')),'@ToolBattleMusic/emerald.lua'))()(mod,choose,reset,active,assets,currentMap)
     return
   end
   mod.hooks:wrap('music.select',function(next,chosen,ctx)
-    if not ctx or ctx.reason ~= 'battle' then
-      reset()
+    if not ctx or (ctx.reason~='battle' and ctx.reason~='map' and ctx.reason~='bike' and ctx.reason~='surf') then
       return next(chosen,ctx)
     end
-    local category = league[ctx.trainerId] and 'league'
+    local category = ctx.reason~='battle' and 'locations' or league[ctx.trainerId] and 'league'
       or (ctx.kind == 'gym' and 'gym' or 'regular')
-    local key=category..':'..tostring(ctx.trainerId)..':'..tostring(chosen)
-    local selected=choose(category,key)
+    local key=category=='locations' and ('locations:'..tostring(ctx.mapId or currentMap()))
+      or category..':'..tostring(ctx.trainerId)..':'..tostring(chosen)
+    local selected=choose(category,key,ctx.mapId or currentMap())
     if selected and not assets:available(selected) then selected=nil end
     if selected and assets.game and not assets:prepare(assets.game.data,selected) then selected=nil end
     return next(selected and ids[selected] or chosen,ctx)
   end)
-  mod.events:on('battle.ended',reset)
-  mod.events:on('mod.options_changed',function(ctx) if ctx.mod==mod.id then reset() end end)
   if mod.generation==2 then
     assert(load(assert(mod:read('gen2.lua')),'@ToolBattleMusic/gen2.lua'))()(mod,choose,active,assets)
   end
