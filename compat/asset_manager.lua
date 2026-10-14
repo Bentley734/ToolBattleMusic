@@ -49,7 +49,7 @@ return function(mod, config)
   local TEMP_NAME = tempNameFor(ASSET_VERSION)
   local MOUNT_POINT = CACHE_NAMESPACE .. "_pack_mount"
   local EXTRACT_BUDGET = 0.010 -- seconds of extraction work per update tick
-  local MAX_CACHE_FILE = 64 * 1024 * 1024
+  local MAX_CACHE_FILE = 512 * 1024 * 1024
   local DOWNLOAD_MAX_SECONDS = 15 * 60 -- large GitHub release; Fetch default (90s) is too short
   -- v3 temporarily staged portable downloads as ranged cache chunks. Keep
   -- these names only so v4 can clean up an interrupted v3 attempt. v4 itself
@@ -234,6 +234,65 @@ return function(mod, config)
       if safeCacheInfo(key) == nil then return true end
       return false, tostring(err or "cache delete failed")
     end
+    return true
+  end
+
+  -- Cache writes have a 64 MiB engine limit. Large tracks use 32 MiB parts.
+  local rawInfo, rawRead, rawWrite, rawDelete = safeCacheInfo, safeCacheRead, safeCacheWrite, safeCacheDelete
+  local CHUNK_BYTES = 32 * 1024 * 1024
+  local function chunkMeta(key)
+    local text = rawRead(key .. ".chunks")
+    if not text then return nil end
+    local size, count = text:match("^(%d+):(%d+)$")
+    size, count = tonumber(size), tonumber(count)
+    if not size or size <= 0 or size > MAX_CACHE_FILE or count ~= math.ceil(size / CHUNK_BYTES) then return nil end
+    return size, count
+  end
+  safeCacheInfo = function(key)
+    local size, count = chunkMeta(key)
+    if not size then return rawInfo(key) end
+    for i = 1, count do
+      local info = rawInfo(key .. ".part" .. i)
+      if not info or info.size ~= math.min(CHUNK_BYTES, size - (i-1)*CHUNK_BYTES) then return nil end
+    end
+    return {size=size, type="file"}
+  end
+  safeCacheRead = function(key)
+    local size, count = chunkMeta(key)
+    if not size then return rawRead(key) end
+    local parts = {}
+    for i = 1, count do
+      local part = rawRead(key .. ".part" .. i)
+      if not part or #part ~= math.min(CHUNK_BYTES, size - (i-1)*CHUNK_BYTES) then return nil end
+      parts[i] = part
+    end
+    return table.concat(parts)
+  end
+  safeCacheDelete = function(key)
+    local _, count = chunkMeta(key)
+    for i = 1, count or 0 do
+      local ok, err = rawDelete(key .. ".part" .. i)
+      if not ok then return false, err end
+    end
+    local ok, err = rawDelete(key .. ".chunks")
+    if not ok then return false, err end
+    return rawDelete(key)
+  end
+  safeCacheWrite = function(key, bytes)
+    if #bytes <= 64*1024*1024 then
+      local ok, err = safeCacheDelete(key)
+      if not ok then return false, err end
+      return rawWrite(key, bytes)
+    end
+    local count = math.ceil(#bytes / CHUNK_BYTES)
+    rawDelete(key .. ".chunks")
+    for i = 1, count do
+      local ok, err = rawWrite(key .. ".part" .. i, bytes:sub((i-1)*CHUNK_BYTES+1, i*CHUNK_BYTES))
+      if not ok then return false, err end
+    end
+    local ok, err = rawWrite(key .. ".chunks", tostring(#bytes) .. ":" .. count)
+    if not ok then return false, err end
+    rawDelete(key)
     return true
   end
 
@@ -956,7 +1015,7 @@ return function(mod, config)
           return nil, "Unsupported ZIP compression method " .. tostring(method) .. " for " .. name
         end
         if uncompSize > MAX_CACHE_FILE then
-          return nil, "Asset exceeds 64 MB cache limit: " .. name
+          return nil, "Asset exceeds 512 MB track limit: " .. name
         end
         out[#out + 1] = {
           relative = name,

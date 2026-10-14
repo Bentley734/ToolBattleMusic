@@ -1,3 +1,7 @@
+# Version 1.6.1
+
+Fix downloads of long tracks exceeding the engine’s 64 MiB cache write limit. Large tracks are stored in 32 MiB chunks and reassembled for playback; existing packs and download URLs are retained. Restart the game and retry the pack download. Tests skipped at user request.
+
 # Tool Battle Music 1.6.0
 
 Add 49 distinct full arrangements: TOOL - Fear Inoculum; 12 Pink Floyd, 10 Rush, 10 A Perfect Circle, 8 Rage Against the Machine and 8 Puscifer songs. Total library: 90 songs. Separate optional packs for each artist and generation; TOOL EXTRAS contains Fear Inoculum without requiring another download of the original TOOL pack.
