@@ -2,6 +2,7 @@ return function(mod, schema, changed, assets)
   local SCREEN=mod.id..':settings'
   local function value(row)
     local v=mod.options:get(row.key)
+    if (row.key=='regular' or row.key=='gym' or row.key=='league') and v~='original' and v~='random' and not assets:enabled(v)then return 'Random (TOOL)'end
     for _,choice in ipairs(row.choices) do if choice[2]==v then return choice[1] end end
     return 'Original'
   end
@@ -9,7 +10,12 @@ return function(mod, schema, changed, assets)
     local v=mod.options:get(row.key)
     local index=1
     for i,choice in ipairs(row.choices) do if choice[2]==v then index=i end end
-    local selected=row.choices[((index-1+(dir<0 and -1 or 1)) % #row.choices)+1][2]
+    local selected
+    repeat
+      index=((index-1+(dir<0 and -1 or 1)) % #row.choices)+1
+      selected=row.choices[index][2]
+    until row.key~='regular' and row.key~='gym' and row.key~='league'
+      or selected=='original' or selected=='random' or assets:enabled(selected)
     local options=(game.save and game.save.options) or game.options
     assert(options,'Tool Music: missing options storage')
     options.modOptions=options.modOptions or {}
@@ -31,9 +37,12 @@ return function(mod, schema, changed, assets)
         value=function() return value(setting) end,
         step=function(ctx,dir) return step((ctx and ctx.game) or ctx or game,setting,dir) end}
     end
-    out[#out+1]={id=SCREEN..':assets',label='DOWNLOAD ASSETS',
-      value=function()return assets:statusLabel()end,
-      activate=function(ctx)assets.open((ctx and ctx.game) or ctx or game)end}
+    for _,pack in ipairs(assets.packs)do
+      local p=pack
+      out[#out+1]={id=SCREEN..':assets:'..p.id,label=p.downloadLabel,
+        value=function()return p.manager:statusLabel()end,
+        activate=function(ctx)p.manager.open((ctx and ctx.game) or ctx or game)end}
+    end
     return out
   end
   if mod.generation~=3 then
@@ -42,13 +51,13 @@ return function(mod, schema, changed, assets)
       local function refresh()
         local items={}
         for _,row in ipairs(schema) do items[#items+1]={label=row.label,right=value(row),setting=row} end
-        items[#items+1]={label='DOWNLOAD ASSETS',right=assets:statusLabel(),assets=true}
+        for _,pack in ipairs(assets.packs)do items[#items+1]={label=pack.downloadLabel,right=pack.manager:statusLabel(),pack=pack}end
         items[#items+1]={label='BACK',back=true};menu.items=items
       end
       menu=mod.ui.ListMenu.new(game,'TOOL MUSIC',{}, {wrap=true,keyRepeat=true,
         onChoose=function(item,m)
           if item.back then m:close()
-          elseif item.assets then assets.open(game)
+          elseif item.pack then item.pack.manager.open(game)
           else step(game,item.setting,1);refresh() end
         end})
       refresh()

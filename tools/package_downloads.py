@@ -14,7 +14,8 @@ def checksum(path):path.with_suffix('.sha256').write_text(digest(path)+'  '+path
 outputs=[root.parent/f'ToolBattleMusic-assets-gen{g}-v{asset_version}.zip' for g in (1,2,3)] if args.core_only else []
 for generation in (() if args.core_only else (1,2,3)):
     folder=root/'audio' if generation==1 else root/'audio'/f'gen{generation}'
-    files=sorted(folder.glob('*.flac'))
+    originals={song['slug'] for song in json.loads((root/'catalog.json').read_text())}
+    files=sorted(path for path in folder.glob('*.flac') if path.stem in originals)
     assert len(files)==41
     catalog={'assets/'+p.relative_to(root).as_posix():{'size':p.stat().st_size,'sha256':digest(p)} for p in files}
     name=f'ToolBattleMusic-assets-gen{generation}-v{asset_version}.zip'

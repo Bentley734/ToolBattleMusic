@@ -15,7 +15,17 @@ return function(mod)
   end
   mod.options:define(schema)
   local choose,reset,currentMap=assert(load(assert(mod:read('playlist.lua'))))()(mod,songs,assets)
-  local decorate=assert(load(assert(mod:read('settings.lua')),'@ToolBattleMusic/settings.lua'))()(mod,schema,reset,assets.manager)
+  local function changed()
+    reset()
+    if mod.generation==3 then
+      local Audio=require('src.core.game3.audio')
+      local id=Audio.currentMapMusic()
+      if id and id~=0 then Audio.playSong(id)end
+    elseif assets.game and currentMap() then
+      require('src.core.Music').restoreMap(assets.game.data,'map')
+    end
+  end
+  local decorate=assert(load(assert(mod:read('settings.lua')),'@ToolBattleMusic/settings.lua'))()(mod,schema,changed,assets)
   local marker=function(next,game,rows) return decorate(next(game,rows),game) end
   mod.hooks:wrap('ui.options.rows',marker)
   local function active()

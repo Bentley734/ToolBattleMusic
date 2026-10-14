@@ -1,3 +1,17 @@
+# Tool Battle Music 1.6.0
+
+Add 49 distinct full arrangements: TOOL - Fear Inoculum; 12 Pink Floyd, 10 Rush, 10 A Perfect Circle, 8 Rage Against the Machine and 8 Puscifer songs. Total library: 90 songs. Separate optional packs for each artist and generation; TOOL EXTRAS contains Fear Inoculum without requiring another download of the original TOOL pack.
+
+ARTIST MIX defaults to TOOL ONLY. ALL INSTALLED enables downloaded optional artists for Random and Area Defaults. Download any combination using the separate GET artist rows. Mixed curated defaults cover every supported area with ordered fitting choices; missing optional packs fall back to an installed choice or the original TOOL assignment. See MIXED-AREAS.md for all assignments and EXPANSION-SONGS.md for sources.
+
+The shared saved shuffle tracks played songs across battles and locations. Newly installed artists join the unused pool; changing artist mode preserves played history. TOOL ONLY skips optional artists in battle song selectors and automatic playback. Original remains available.
+
+Every new render begins at its first nonzero PCM sample; audible intros and internal pauses are preserved. Reuse the existing trimmed TOOL 1.0.1 packs. Existing saved choices and shuffle state remain compatible.
+
+Free alternative arrangements were used as requested: MIDIfind and Songparts. Supreme MIDI requires a subscription and restricts its files to private use; RushMIDI's certificate failed validation. Duplicate song variants and a short Puscifer fragment were omitted. No original audio recordings or soundfonts are distributed.
+
+Testing skipped at the user's request. Restart after updating; open OPTIONS > TOOL MUSIC, download desired packs, then choose ARTIST MIX > ALL INSTALLED.
+
 # Tool Battle Music 1.5.1
 
 Remove exact leading PCM silence from 107 generation-specific tracks. Preserve audible samples, quiet introductions, volume and all pauses after the music begins. Future renders trim the silent pickup automatically.

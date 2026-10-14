@@ -1,7 +1,7 @@
 {
   "id": "toolbattlemusic",
   "name": "Tool Battle Music",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "api": 2,
   "entry": "main.lua",
   "games": [
@@ -20,7 +20,7 @@
   "options_schema": "options.lua",
   "game_version": ">=0.3.54 <0.4.0",
   "category": "Audio",
-  "description": "41 Tool songs for battles and every area across Gen 1\u20133, curated area defaults and one shared no-repeat random pool.",
+  "description": "90 MIDI songs across TOOL and five optional artist packs, Gen 1-3 audio, curated area defaults and shared no-repeat random playback.",
   "affects_link": false,
   "permissions": [
     "engine_internals",

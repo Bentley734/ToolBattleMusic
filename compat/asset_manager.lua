@@ -1537,7 +1537,7 @@ return function(mod, config)
           local Font = mod.ui and mod.ui.Font
           if not Font then return end
           Font.drawBox(0, 0, 20, 18)
-          Font.draw("Tool Music", 8, 8)
+          Font.draw(config.label or "TOOL MUSIC", 8, 8)
           Font.draw("ASSET MANAGER", 8, 24)
           if manager.state == "checking" then
             Font.draw("CHECKING RELEASE...", 8, 52)
@@ -1567,11 +1567,11 @@ return function(mod, config)
             end
             Font.draw("PLEASE WAIT", 8, 120)
           elseif manager.state == "deleting" then
-            Font.draw("REMOVING DEX ASSETS", 8, 48)
+            Font.draw("REMOVING MUSIC PACK", 8, 48)
             Font.draw(string.format("FILES %d/%d", manager.deletedCount, #manager.deleteFiles), 8, 70)
             Font.draw("PLEASE WAIT", 8, 104)
           elseif manager.state == "confirm_delete" then
-            Font.draw("REMOVE DEX ASSETS?", 8, 48)
+            Font.draw("REMOVE MUSIC PACK?", 8, 48)
             Font.draw("FREES CACHE SPACE", 8, 66)
             Font.draw("CAN DOWNLOAD AGAIN", 8, 82)
             Font.draw("A REMOVE", 8, 108)
@@ -1734,7 +1734,7 @@ return function(mod, config)
         G.setColor(1, 1, 1, 1)
         G.rectangle("fill", 0, 0, 240, 160)
         Window.stdFrame(Window.template(1, 1, 28, 18))
-        line("Tool Music", 14)
+        line(config.label or "TOOL MUSIC", 14)
         line("ASSET MANAGER", 30)
 
         if manager.state == "checking" then
@@ -1762,11 +1762,11 @@ return function(mod, config)
           line("NO DOWNLOAD REQUIRED", 92)
           line("PLEASE WAIT", 128)
         elseif manager.state == "deleting" then
-          line("REMOVING DEX ASSETS", 54)
+          line("REMOVING MUSIC PACK", 54)
           line(string.format("FILES %d/%d", manager.deletedCount, #manager.deleteFiles), 76)
           line("PLEASE WAIT", 112)
         elseif manager.state == "confirm_delete" then
-          line("REMOVE DEX ASSETS?", 52)
+          line("REMOVE MUSIC PACK?", 52)
           line("FREES CACHE SPACE", 72)
           line("CAN DOWNLOAD AGAIN", 92)
           line("A REMOVE   B CANCEL", 120)

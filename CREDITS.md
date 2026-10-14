@@ -15,3 +15,6 @@ cache installer, portable-mode handling, and native generation-specific menus.
 
 gen1recomp provides the mod API, network fetch worker, native audio engines,
 cache filesystem and UI components used by the mod.
+
+
+Optional artist arrangements: individual free MIDI sources and arranger metadata are retained in EXPANSION-SONGS.md and the MIDI files. Fear Inoculum uses the free seven-track Songparts arrangement. All new files are synthesized with this mod's original chip-style renderer; no original artist recordings or soundfonts are included.
