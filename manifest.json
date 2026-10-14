@@ -1,0 +1,17 @@
+{
+  "id": "toolbattlemusic",
+  "name": "Tool Battle Music",
+  "version": "1.4.0",
+  "api": 2,
+  "entry": "main.lua",
+  "games": ["red", "blue", "yellow", "gold", "silver", "crystal", "ruby", "sapphire", "emerald", "firered", "leafgreen"],
+  "options_schema": "options.lua",
+  "game_version": ">=0.3.54 <0.4.0",
+  "category": "Audio",
+  "description": "41 unique Tool MIDI songs. Automatic Gen 1/2/3 audio, independent regular/Gym/League choices, Random and Original.",
+  "affects_link": false,
+  "permissions": ["engine_internals", "network"],
+  "github": "Bentley734/ToolBattleMusic",
+  "dependencies": [],
+  "conflicts": ["toolbattlemusic_gen2", "toolbattlemusic_gen3"]
+}
