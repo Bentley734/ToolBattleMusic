@@ -121,10 +121,17 @@ def render(path, target, style='classic'):
     if style=='gen3':envelope=envelope[:,None]
     audio[:fade]*=envelope;audio[-fade:]*=envelope[::-1]
     audio,loudness_gain,rms_before,rms_after=master_loudness(audio)
+    # Remove the MIDI's silent pickup before encoding, while retaining quiet
+    # audible attacks and all later pauses in the arrangement.
+    audible=np.abs(audio)>=1/32768
+    if audio.ndim>1:audible=np.any(audible,axis=1)
+    onset=np.flatnonzero(audible)
+    leading=int(onset[0]) if len(onset) else 0
+    audio=audio[leading:]
     with sf.SoundFile(target,'w',samplerate=rate,channels=2 if style=='gen3' else 1,format='FLAC',subtype='PCM_16') as stream:
         for offset in range(0,len(audio),4096): stream.write(audio[offset:offset+4096])
     return {'style':style,'sample_rate':rate,'channels':2 if style=='gen3' else 1,
-            'seconds':round(duration,3),'notes':len(notes),'peak':round(peak,4),
+            'seconds':round(len(audio)/rate,3),'leading_silence_removed_seconds':leading/rate,'notes':len(notes),'peak':round(peak,4),
             'loudness_gain_db':round(20*np.log10(loudness_gain),3),
             'rms_before':round(rms_before,6),'rms_after':round(rms_after,6),
             'midi_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),

@@ -1,0 +1,430 @@
+{
+  "audio/10000_days.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00022675736961451248
+  },
+  "audio/aenima.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/bottom.flac": {
+    "removed_frames": 4563,
+    "removed_seconds": 0.2069387755102041
+  },
+  "audio/cold_and_ugly.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/crawl_away.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/disposition.flac": {
+    "removed_frames": 6,
+    "removed_seconds": 0.00027210884353741496
+  },
+  "audio/eulogy.flac": {
+    "removed_frames": 64005,
+    "removed_seconds": 2.9027210884353742
+  },
+  "audio/h.flac": {
+    "removed_frames": 52521,
+    "removed_seconds": 2.381904761904762
+  },
+  "audio/hooker_with_a_penis.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/intension.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/intolerance.flac": {
+    "removed_frames": 13322,
+    "removed_seconds": 0.604172335600907
+  },
+  "audio/jambi.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/jerk_off.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/jimmy.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/lateralus.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00022675736961451248
+  },
+  "audio/no_quarter.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/opiate.flac": {
+    "removed_frames": 18900,
+    "removed_seconds": 0.8571428571428571
+  },
+  "audio/parabola.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/part_of_me.flac": {
+    "removed_frames": 6,
+    "removed_seconds": 0.00027210884353741496
+  },
+  "audio/pushit.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/reflection.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/right_in_two.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00022675736961451248
+  },
+  "audio/rosetta_stoned.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/schism.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/sober.flac": {
+    "removed_frames": 33552,
+    "removed_seconds": 1.5216326530612245
+  },
+  "audio/swamp_song.flac": {
+    "removed_frames": 8,
+    "removed_seconds": 0.00036281179138321996
+  },
+  "audio/sweat.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/the_grudge.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/the_patient.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00022675736961451248
+  },
+  "audio/the_pot.flac": {
+    "removed_frames": 197832,
+    "removed_seconds": 8.971972789115647
+  },
+  "audio/third_eye.flac": {
+    "removed_frames": 6,
+    "removed_seconds": 0.00027210884353741496
+  },
+  "audio/ticks_and_leeches.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/undertow.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/vicarious.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/wings_for_marie.flac": {
+    "removed_frames": 6,
+    "removed_seconds": 0.00027210884353741496
+  },
+  "audio/you_lied.flac": {
+    "removed_frames": 61062,
+    "removed_seconds": 2.769251700680272
+  },
+  "audio/gen2/10000_days.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/bottom.flac": {
+    "removed_frames": 4563,
+    "removed_seconds": 0.2069387755102041
+  },
+  "audio/gen2/cold_and_ugly.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/crawl_away.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/disposition.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/eulogy.flac": {
+    "removed_frames": 64006,
+    "removed_seconds": 2.902766439909297
+  },
+  "audio/gen2/h.flac": {
+    "removed_frames": 52509,
+    "removed_seconds": 2.3813605442176873
+  },
+  "audio/gen2/hooker_with_a_penis.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/intension.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.00018140589569160998
+  },
+  "audio/gen2/intolerance.flac": {
+    "removed_frames": 13317,
+    "removed_seconds": 0.6039455782312925
+  },
+  "audio/gen2/jambi.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/jerk_off.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/jimmy.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/lateralus.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/no_quarter.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/opiate.flac": {
+    "removed_frames": 18900,
+    "removed_seconds": 0.8571428571428571
+  },
+  "audio/gen2/parabola.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/part_of_me.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/pushit.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/reflection.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/right_in_two.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/rosetta_stoned.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/schism.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/sober.flac": {
+    "removed_frames": 33563,
+    "removed_seconds": 1.5221315192743765
+  },
+  "audio/gen2/swamp_song.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/sweat.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/the_grudge.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/the_patient.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/the_pot.flac": {
+    "removed_frames": 197832,
+    "removed_seconds": 8.971972789115647
+  },
+  "audio/gen2/third_eye.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00022675736961451248
+  },
+  "audio/gen2/ticks_and_leeches.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/undertow.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 0.00013605442176870748
+  },
+  "audio/gen2/vicarious.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/wings_for_marie.flac": {
+    "removed_frames": 2,
+    "removed_seconds": 9.070294784580499e-05
+  },
+  "audio/gen2/you_lied.flac": {
+    "removed_frames": 61062,
+    "removed_seconds": 2.769251700680272
+  },
+  "audio/gen3/10000_days.flac": {
+    "removed_frames": 6,
+    "removed_seconds": 0.0001875
+  },
+  "audio/gen3/bottom.flac": {
+    "removed_frames": 6621,
+    "removed_seconds": 0.20690625
+  },
+  "audio/gen3/cold_and_ugly.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/crawl_away.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/disposition.flac": {
+    "removed_frames": 8,
+    "removed_seconds": 0.00025
+  },
+  "audio/gen3/eulogy.flac": {
+    "removed_frames": 93189,
+    "removed_seconds": 2.91215625
+  },
+  "audio/gen3/h.flac": {
+    "removed_frames": 74931,
+    "removed_seconds": 2.34159375
+  },
+  "audio/gen3/hooker_with_a_penis.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/intension.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/intolerance.flac": {
+    "removed_frames": 19604,
+    "removed_seconds": 0.612625
+  },
+  "audio/gen3/jambi.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/jerk_off.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/jimmy.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/lateralus.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/no_quarter.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/opiate.flac": {
+    "removed_frames": 27429,
+    "removed_seconds": 0.85715625
+  },
+  "audio/gen3/parabola.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/part_of_me.flac": {
+    "removed_frames": 7,
+    "removed_seconds": 0.00021875
+  },
+  "audio/gen3/prison_sex.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/pushit.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/reflection.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/right_in_two.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/rosetta_stoned.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/schism.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/sober.flac": {
+    "removed_frames": 47728,
+    "removed_seconds": 1.4915
+  },
+  "audio/gen3/swamp_song.flac": {
+    "removed_frames": 9,
+    "removed_seconds": 0.00028125
+  },
+  "audio/gen3/sweat.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/the_grudge.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/the_patient.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/the_pot.flac": {
+    "removed_frames": 287103,
+    "removed_seconds": 8.97196875
+  },
+  "audio/gen3/third_eye.flac": {
+    "removed_frames": 8,
+    "removed_seconds": 0.00025
+  },
+  "audio/gen3/ticks_and_leeches.flac": {
+    "removed_frames": 4,
+    "removed_seconds": 0.000125
+  },
+  "audio/gen3/undertow.flac": {
+    "removed_frames": 5,
+    "removed_seconds": 0.00015625
+  },
+  "audio/gen3/vicarious.flac": {
+    "removed_frames": 3,
+    "removed_seconds": 9.375e-05
+  },
+  "audio/gen3/wings_for_marie.flac": {
+    "removed_frames": 7,
+    "removed_seconds": 0.00021875
+  },
+  "audio/gen3/you_lied.flac": {
+    "removed_frames": 88616,
+    "removed_seconds": 2.76925
+  }
+}

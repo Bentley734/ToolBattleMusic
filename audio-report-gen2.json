@@ -39,16 +39,17 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 516.673,
+    "seconds": 513.77,
     "notes": 6745,
     "peak": 0.4634,
     "midi_sha256": "e540d28d5122ac107100fa3931232aafd0e03c49cadc824dbf2f79c0e8e8451c",
-    "ogg_sha256": "d245276ae0b1a91851b44d715caebfc33d63f1c3ed9684c706267c1b224ce264",
+    "ogg_sha256": "981dba560aa2bcc80371fd0c0bc7165d32d757dae876599ba4f0ec90c1c78d42",
     "loudness_gain_db": 0.0,
     "rms_before": 0.174609,
     "rms_after": 0.177234,
     "format": "FLAC",
-    "decoded_peak": 0.699388
+    "decoded_peak": 0.699388,
+    "leading_silence_removed_seconds": 2.902766439909297
   },
   "flood": {
     "title": "Flood",
@@ -73,16 +74,17 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 369.245,
+    "seconds": 366.863,
     "notes": 2357,
     "peak": 0.3306,
     "midi_sha256": "bd62960819cca9c562e2460632ac2bd10f16242c42791355c225ddd1b175c34a",
-    "ogg_sha256": "93e02b62509398894ac83a231fc5a26033a87aef17041805416ad71a7e390ddf",
+    "ogg_sha256": "78a4ca17251b5f2cde87d46f75621b77f81e435edd480d2426fa532dfe9462e8",
     "loudness_gain_db": 0.0,
     "rms_before": 0.25114,
     "rms_after": 0.248543,
     "format": "FLAC",
-    "decoded_peak": 0.854356
+    "decoded_peak": 0.854356,
+    "leading_silence_removed_seconds": 2.3813605442176873
   },
   "hush": {
     "title": "Hush",
@@ -107,16 +109,17 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 277.879,
+    "seconds": 277.275,
     "notes": 3549,
     "peak": 0.4325,
     "midi_sha256": "824af092516b5dd0dfd247563699c562c3724009e15890db49ece76babc65df8",
-    "ogg_sha256": "aee04c7a541e18b0210a3477823f8847a0628f0c3e9df73581c2e0c0fd98d6eb",
+    "ogg_sha256": "2b2e82649386dde769a502015b5f077d9b0365327b89bb153ea06b5663ddc265",
     "loudness_gain_db": 0.0,
     "rms_before": 0.206923,
     "rms_after": 0.20686,
     "format": "FLAC",
-    "decoded_peak": 0.698078
+    "decoded_peak": 0.698078,
+    "leading_silence_removed_seconds": 0.6039455782312925
   },
   "prison_sex": {
     "title": "Prison Sex",
@@ -141,16 +144,17 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 292.457,
+    "seconds": 290.935,
     "notes": 3218,
     "peak": 0.4453,
     "midi_sha256": "b922090f2b3029a66de911cd31a56f5b96975affc44bad86cf5ce9b5fd982380",
-    "ogg_sha256": "f69492bad59d2a1a7afdf2c69956a094d189e601265e6713c580e8ef7672f6db",
+    "ogg_sha256": "6143c7e5fdc6aedcb98ce797c4d4f6cb303d4a6d2b50b607317f6096d3da5b9a",
     "loudness_gain_db": 0.0,
     "rms_before": 0.17428,
     "rms_after": 0.175912,
     "format": "FLAC",
-    "decoded_peak": 0.6975
+    "decoded_peak": 0.6975,
+    "leading_silence_removed_seconds": 1.5221315192743765
   },
   "stinkfist": {
     "title": "Stinkfist",
@@ -185,7 +189,8 @@
     "loudness_gain_db": 0.597,
     "rms_before": 0.158968,
     "rms_after": 0.170139,
-    "ogg_sha256": "dfa775054e1ef946875f45c8ce25dd40b5e4ef5b727979e1c876a0108304e13f"
+    "ogg_sha256": "3cedf3f83b3bbc09e83dfbe3fdc16f3587bd927f0f203db4a54abab2a71e6345",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "bottom": {
     "title": "Bottom",
@@ -197,13 +202,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 417.257,
+    "seconds": 417.05,
     "notes": 3709,
     "peak": 0.3059,
     "loudness_gain_db": 0.68,
     "rms_before": 0.157501,
     "rms_after": 0.170109,
-    "ogg_sha256": "ddd4794733b9420ce2e9ccc03ce01caf1b31b067f590362cca92ac1e01204582"
+    "ogg_sha256": "d559ae36558ed29480b84cbf86901515e293908d3b3c98f8abe93e761c1d5907",
+    "leading_silence_removed_seconds": 0.2069387755102041
   },
   "cold_and_ugly": {
     "title": "Cold and Ugly",
@@ -221,7 +227,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.241081,
     "rms_after": 0.237061,
-    "ogg_sha256": "6224b60a2d149deb0f9a35b807fb96e581f6ec9084f02b81bf1becf3709fe109"
+    "ogg_sha256": "efdfb9976bee20595d89f68ef707f38de389d7bd42db6cf4be8d6d6c8bb0e869",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "crawl_away": {
     "title": "Crawl Away",
@@ -239,7 +246,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.189201,
     "rms_after": 0.188839,
-    "ogg_sha256": "21c696f0dc086db3ce96f997ac07d47f122ed13d4867d8926b4235a61376faf7"
+    "ogg_sha256": "2b698e91e2236d442b3e645db06cca23fd2b31d01b864826f313392d15c6fda8",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "disposition": {
     "title": "Disposition",
@@ -257,7 +265,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.258107,
     "rms_after": 0.253627,
-    "ogg_sha256": "56ae8cdf992a5a5cb804dd8b129e7cb07eeba3ba21fa62d447dccad545fc08ef"
+    "ogg_sha256": "4cfefad047b376964c7c0fa5dda444b7b4ce034cb97b2f650c76832aea8b7893",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "hooker_with_a_penis": {
     "title": "Hooker With a Penis",
@@ -275,7 +284,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.194253,
     "rms_after": 0.193864,
-    "ogg_sha256": "f7babc0990772ac841b2e721448caa9b8408add434c4ba7ff7c8cdbcb09e5015"
+    "ogg_sha256": "5d3ef343c59760afd4bb7f4669cc70e7f77b8be47f8644b28fac6397058c61bc",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "intension": {
     "title": "Intension",
@@ -293,7 +303,8 @@
     "loudness_gain_db": 1.913,
     "rms_before": 0.136856,
     "rms_after": 0.170157,
-    "ogg_sha256": "e43fc0ec86eda2b5afadee81541da249b929ab30979959e75229d3ce8ffe74c1"
+    "ogg_sha256": "3411ddd18ae8958a38a117dee7a1981520221f5fc76b348c95f72f1373d8e4a7",
+    "leading_silence_removed_seconds": 0.00018140589569160998
   },
   "jambi": {
     "title": "Jambi",
@@ -305,13 +316,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 443.682,
+    "seconds": 443.681,
     "notes": 4681,
     "peak": 0.2263,
     "loudness_gain_db": 0.0,
     "rms_before": 0.202424,
     "rms_after": 0.201588,
-    "ogg_sha256": "07f2fefa2a5b4efe137dee279081b35fcb7ff9a5823de8c233c06ca716af4387"
+    "ogg_sha256": "66b213da3fe264603809d0f8905f567c19f1fc869ccc5cfcc91702c226c289d7",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "jerk_off": {
     "title": "Jerk Off",
@@ -329,7 +341,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.263171,
     "rms_after": 0.25438,
-    "ogg_sha256": "b155a88cd661dc3729ee4f2450849cb8a187be567184468d4338392cb6d9ded2"
+    "ogg_sha256": "ba7d6110daf4cf7bdf8786b35b3eb432a008730e093a3b0c019c6d0b8fb9687a",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "jimmy": {
     "title": "Jimmy",
@@ -341,13 +354,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 308.227,
+    "seconds": 308.226,
     "notes": 3998,
     "peak": 0.2712,
     "loudness_gain_db": 0.0,
     "rms_before": 0.177664,
     "rms_after": 0.177485,
-    "ogg_sha256": "0060467a2745705fa07287ec6e835f8d463f5dfc74386e420caaff47cfd4d234"
+    "ogg_sha256": "7b6c143d08bf0b4ebfad221867f68450d3ab5a00a605fad65fd0b318bdd30153",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "lateralus": {
     "title": "Lateralus",
@@ -365,7 +379,8 @@
     "loudness_gain_db": 0.043,
     "rms_before": 0.169457,
     "rms_after": 0.170115,
-    "ogg_sha256": "969a612b4901b9a7d5402599f73bd90751882bca3ca82a57e499f0b49f3e9263"
+    "ogg_sha256": "1ea279c30b3149cff3ae7541fa55019ebf651abc7df36301816c1c0128abc041",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "no_quarter": {
     "title": "No Quarter",
@@ -383,7 +398,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.23091,
     "rms_after": 0.222408,
-    "ogg_sha256": "97a343dfcfd7d113b8164d937d927eb4e280281bc5c86884b5f36022742cabe8"
+    "ogg_sha256": "dd4c714fb36152059f91ac9889183b85f21ce846671bd9afb5a8ce96f2cb25ad",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "opiate": {
     "title": "Opiate",
@@ -395,13 +411,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 309.244,
+    "seconds": 308.387,
     "notes": 2442,
     "peak": 0.1978,
     "loudness_gain_db": 0.0,
     "rms_before": 0.242663,
     "rms_after": 0.237958,
-    "ogg_sha256": "53198df9725ca7899863746ca87e915e54fd4577df6be1dad7efc6f31ed6b466"
+    "ogg_sha256": "d36cc9af7697db21c7628670bdf43d5a899668ccd6a0eebd60e53cbd05b46a28",
+    "leading_silence_removed_seconds": 0.8571428571428571
   },
   "parabola": {
     "title": "Parabola",
@@ -413,13 +430,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 368.005,
+    "seconds": 368.004,
     "notes": 3908,
     "peak": 0.2806,
     "loudness_gain_db": 0.086,
     "rms_before": 0.168597,
     "rms_after": 0.170102,
-    "ogg_sha256": "2f8ebdd2dffa92bbda211fb074146bdf1bc163164e302cc8f1c8e65613a6bef5"
+    "ogg_sha256": "81abc0417c2894855eccd8af558a86e7895c6c45418ab212c3f625a4ef93dd70",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "part_of_me": {
     "title": "Part of Me",
@@ -437,7 +455,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.190841,
     "rms_after": 0.190515,
-    "ogg_sha256": "3249c467dbe06c078af680273a6a435c166ed08132721b80bff83480f157a8e4"
+    "ogg_sha256": "e8f833dd2a758f8278236ef1c7d5ef7b4c243eac08aaa51da7088ed99aa572c0",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "pushit": {
     "title": "Pushit",
@@ -455,7 +474,8 @@
     "loudness_gain_db": 0.086,
     "rms_before": 0.168543,
     "rms_after": 0.170117,
-    "ogg_sha256": "077c491c2ecce5f6488a72f10e3b85da32ccbafed0c5696cfefbe4e2cc67c426"
+    "ogg_sha256": "2f0f67fd9780809fc3f423534f6de373629eb349916a23173dafb339d263f909",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "reflection": {
     "title": "Reflection",
@@ -473,7 +493,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.187239,
     "rms_after": 0.187078,
-    "ogg_sha256": "a24cba11ace88c9c983aedbb44d2d803fed53b4acbfeb51a8b48c739d14b4bcd"
+    "ogg_sha256": "24ffe17c94ec8a7f63a4d27ba14aef5e390a526f822c47ca3e29f1f8702ff267",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "right_in_two": {
     "title": "Right in Two",
@@ -491,7 +512,8 @@
     "loudness_gain_db": 0.692,
     "rms_before": 0.157222,
     "rms_after": 0.170056,
-    "ogg_sha256": "07f42f9ee88f2da998761ae40b061dd4b0d0323964567d1820daa52998730741"
+    "ogg_sha256": "db4e762e2c84505aca40c95525d9650c6d889d61f45daf4135343684f14d65fb",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "rosetta_stoned": {
     "title": "Rosetta Stoned",
@@ -509,7 +531,8 @@
     "loudness_gain_db": 0.247,
     "rms_before": 0.165413,
     "rms_after": 0.170045,
-    "ogg_sha256": "845e65031ed1e8e9e7dce5e6118cb65f52b0304fb6418e4f4d541f5a8dcbe09b"
+    "ogg_sha256": "b827b5fc02ac446b3483e1e2ce98994fa75c08bfc499e3709b75c851dbda81cc",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "schism": {
     "title": "Schism",
@@ -527,7 +550,8 @@
     "loudness_gain_db": 0.466,
     "rms_before": 0.161454,
     "rms_after": 0.170079,
-    "ogg_sha256": "fb2d3211f5895e6a68932f587424b3e08f58d5a1beef8d985d50dc158adda074"
+    "ogg_sha256": "ecdfa8769efaac0e0370c1a2d3c910d3d82b4808283157570dbfe9b518df75b5",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "swamp_song": {
     "title": "Swamp Song",
@@ -545,7 +569,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.192244,
     "rms_after": 0.192069,
-    "ogg_sha256": "2b9c98fb72061395468304efa3d31739d70ef40d9f9677504ff57307035d7f3c"
+    "ogg_sha256": "e969a2cde23a2256f8a366dd8f7551315eaa3ff3e02da00234d7933de1fab21a",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "sweat": {
     "title": "Sweat",
@@ -563,7 +588,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.192315,
     "rms_after": 0.192085,
-    "ogg_sha256": "414216d1cb5675dc9c87cec68a8d16b545b0d61ca19449cadd05fee5129014a6"
+    "ogg_sha256": "b86902f83c0fb3ca1ddc8609c31e51e6c29361292fac666cbfe5197cb525da67",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "the_grudge": {
     "title": "The Grudge",
@@ -581,7 +607,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.173284,
     "rms_after": 0.173173,
-    "ogg_sha256": "8dd4748adfba434d80fec7f8ebbd57aa021883407a936ac99e9a4c618a0c969a"
+    "ogg_sha256": "f40aadf8727300ee4bb9bf0d26601b82f85ae5bf11670638530abc1dcdf55b59",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "the_patient": {
     "title": "The Patient",
@@ -599,7 +626,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.180155,
     "rms_after": 0.180073,
-    "ogg_sha256": "239f817e182ced024bd443f1204644c5c61313f2122dd1a8df22614fa86ea1de"
+    "ogg_sha256": "799a9923df4defd853b4869bac80fbca23c27ba9d98519ae3a46e4f555ad4b28",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "the_pot": {
     "title": "The Pot",
@@ -611,13 +639,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 374.449,
+    "seconds": 365.477,
     "notes": 1397,
     "peak": 0.072,
     "loudness_gain_db": 0.0,
     "rms_before": 0.458408,
     "rms_after": 0.418653,
-    "ogg_sha256": "fb92e12535566a09c4a371264f8019f2ab0939d03d16e7d1030c9fd5c4cee852"
+    "ogg_sha256": "8853a8fe42b05df07a47fc12c6f277560ed934fb61c5d2b5f8ef3917f70f9838",
+    "leading_silence_removed_seconds": 8.971972789115647
   },
   "third_eye": {
     "title": "Third Eye",
@@ -635,7 +664,8 @@
     "loudness_gain_db": 0.911,
     "rms_before": 0.153282,
     "rms_after": 0.170085,
-    "ogg_sha256": "b5473486aa4f4a3a69a19ca1e1e0ebd389c8f475f2e770d1b14e3a91af5235be"
+    "ogg_sha256": "75cbd276302a9db2b6ac32f7393b5c7126c313812e8bafef2aaddb3f46e0f801",
+    "leading_silence_removed_seconds": 0.00022675736961451248
   },
   "ticks_and_leeches": {
     "title": "Ticks and Leeches",
@@ -653,7 +683,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.170958,
     "rms_after": 0.170798,
-    "ogg_sha256": "e6f1b83556ff7d5752cc4fd133fe2ea07b537b1b8c85c7946f097c9f5396860c"
+    "ogg_sha256": "68c8971ecf3a3c96cbcf4ef7097974a6f2dd18f98e1b4e775cb8e06253415c28",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "undertow": {
     "title": "Undertow",
@@ -665,13 +696,14 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 315.124,
+    "seconds": 315.123,
     "notes": 3932,
     "peak": 0.2752,
     "loudness_gain_db": 0.0,
     "rms_before": 0.190639,
     "rms_after": 0.190282,
-    "ogg_sha256": "1556016a2e296ac460a803fde983e3923ba35a82d8e497f7008d6c8e8655de30"
+    "ogg_sha256": "22655b93201ed8a6d4b5593132717227d477306fb33acddaa2cb97a3c1026717",
+    "leading_silence_removed_seconds": 0.00013605442176870748
   },
   "vicarious": {
     "title": "Vicarious",
@@ -689,7 +721,8 @@
     "loudness_gain_db": 0.0,
     "rms_before": 0.185045,
     "rms_after": 0.184866,
-    "ogg_sha256": "eb7e991ae7bb0a5c5f78656198c488fc4e084f19f8ab84a0edfa82807008a0df"
+    "ogg_sha256": "df009440dc59836b40f92f1744ee3ae10b43f8f39c127a1791c3ea7a739cff2c",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "wings_for_marie": {
     "title": "Wings for Marie",
@@ -707,7 +740,8 @@
     "loudness_gain_db": 4.308,
     "rms_before": 0.105045,
     "rms_after": 0.170195,
-    "ogg_sha256": "0fd79dcb6f0d8121860350555ebdb65b41189dc57e209beb87a8e42f2b522064"
+    "ogg_sha256": "d78f611ff2117f0a924801e0ab388eae4f120613ffaf4a2dcdf00c8acf520faa",
+    "leading_silence_removed_seconds": 9.070294784580499e-05
   },
   "you_lied": {
     "title": "You Lied",
@@ -719,12 +753,13 @@
     "style": "gen2",
     "sample_rate": 22050,
     "channels": 1,
-    "seconds": 506.803,
+    "seconds": 504.034,
     "notes": 5058,
     "peak": 0.2839,
     "loudness_gain_db": 0.0,
     "rms_before": 0.191071,
     "rms_after": 0.190994,
-    "ogg_sha256": "5fa9dbdd4914b1fd3e951ebcb9c039f359dfa6e2345416e02b48c938328dc62c"
+    "ogg_sha256": "3ce129bc351a50297faae6e57f74b65d49cdc37434b07e2381695573456e56d0",
+    "leading_silence_removed_seconds": 2.769251700680272
   }
 }
