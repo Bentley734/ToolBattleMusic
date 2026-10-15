@@ -91,7 +91,10 @@ local choices = {{'Original','original'}, {'Random','random'},
   {"RAGE: Bombtrack","rage_bombtrack"},
 
 }
+local volumes={}
+for n=0,100,5 do volumes[#volumes+1]={tostring(n)..'%',n}end
 return {
+  {key='volume',label='TOOL VOLUME',type='choice',default=100,choices=volumes},
   {key="artists",label="ARTIST MIX",type="choice",default="tool",choices={{"TOOL ONLY","tool"},{"ALL INSTALLED","mixed"}}},
   {key='locations',label='OUTSIDE BATTLE',type='choice',default='curated',choices={{'Original','original'},{'Area Defaults','curated'},{'Random','random'}}},
   {key='regular',label='REGULAR BATTLES',type='choice',default='random',choices=choices},

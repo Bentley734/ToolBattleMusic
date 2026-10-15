@@ -1,5 +1,5 @@
 -- Emerald has its own M4A audio bus; GB music.select never reaches it.
-return function(mod,choose,reset,active,assets,currentMap)
+return function(mod,choose,reset,active,assets,currentMap,gain)
   local Audio=require('src.core.game3.audio')
   local source, selected, cue, suspended
   local roleCategory
@@ -43,7 +43,7 @@ return function(mod,choose,reset,active,assets,currentMap)
     -- The engine still owns song identity, fades and victory/map restoration.
     -- Silence only its BGM source while our streamed soundtrack owns that bus.
     if Audio._bgmSource then Audio._bgmSource:setVolume(0) end
-    local volume=(Audio._bgmVolume or 1)*math.min(Audio._duck or 1,Audio._seDuck or 1)
+    local volume=(Audio._audioMode=='external_only'and 0 or gain())*math.min(Audio._duck or 1,Audio._seDuck or 1)
       *(Audio._helpActive and .5 or 1)
     local fade=Audio._fadeOut
     if fade then volume=volume*(1-math.min(1,(fade.t or 0)/math.max(fade.dur or .01,.01))) end

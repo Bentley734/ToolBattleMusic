@@ -26,7 +26,7 @@ return function(mod, schema, changed, assets)
       game.mods.modOptions[mod.id]=options.modOptions[mod.id]
     end
     if game.writeOptions then game:writeOptions() end
-    changed()
+    changed(row.key)
     return false
   end
   local function rows(game)

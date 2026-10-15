@@ -1,7 +1,7 @@
 {
   "id": "toolbattlemusic",
   "name": "Tool Battle Music",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "api": 2,
   "entry": "main.lua",
   "games": [

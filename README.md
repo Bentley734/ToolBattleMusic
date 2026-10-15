@@ -1,3 +1,11 @@
+# Tool Battle Music 1.6.2 — Independent volume
+
+OPTIONS → TOOL MUSIC → TOOL VOLUME controls replacement music from 0–100% in 5% steps, independently of the game music slider, across all eleven games. The default is 100%. The control applies to all Tool Music artist packs, in battles and outside battle. Game music can be muted while replacement music remains audible; TOOL VOLUME at 0% silences replacements without restoring native music.
+
+Volume updates immediately without restarting the track. Native music selections retain the game volume. GB intro/loop sources, native fade timing, Gen 3 ducking/help attenuation, fanfare pauses and audio mode routing remain supported. Optional packs and existing song choices are unchanged.
+
+Built from GitHub's latest release v1.6.1 (c0c65516816bcb8f5cb7faf9650b846ac51ae037). Validation covers the actual Gen 1/2 Music state machine, Gen 3 audio bridge and persistent settings in LuaJIT/Lua 5.3, plus eleven-game Loader/Sandbox startup. Restart after installing.
+
 # Version 1.6.1
 
 Fix downloads of long tracks exceeding the engine’s 64 MiB cache write limit. Large tracks are stored in 32 MiB chunks and reassembled for playback; existing packs and download URLs are retained. Restart the game and retry the pack download. Tests skipped at user request.

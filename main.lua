@@ -15,7 +15,9 @@ return function(mod)
   end
   mod.options:define(schema)
   local choose,reset,currentMap=assert(load(assert(mod:read('playlist.lua'))))()(mod,songs,assets)
-  local function changed()
+  local volume=assert(load(assert(mod:read('volume.lua'))))()(mod)
+  local function changed(key)
+    if key=='volume'then volume.refresh();return end
     reset()
     if mod.generation==3 then
       local Audio=require('src.core.game3.audio')
@@ -35,8 +37,9 @@ return function(mod)
     end
     return false
   end
+  volume.install(active)
   mod.events:on('battle.ended',reset)
-  mod.events:on('mod.options_changed',function(ctx)if ctx.mod==mod.id then reset()end end)
+  mod.events:on('mod.options_changed',function(ctx)if ctx.mod==mod.id then if ctx.key=='volume'then volume.refresh()else reset()end end end)
   if mod.generation==3 then
     local Rows=require('src.ui.game3.option_rows')
     local build=Rows.build
@@ -44,7 +47,7 @@ return function(mod)
       local out=build(ctx,...)
       return active() and decorate(out,ctx and ctx.game) or out
     end
-    assert(load(assert(mod:read('emerald.lua')),'@ToolBattleMusic/emerald.lua'))()(mod,choose,reset,active,assets,currentMap)
+    assert(load(assert(mod:read('emerald.lua')),'@ToolBattleMusic/emerald.lua'))()(mod,choose,reset,active,assets,currentMap,volume.gain)
     return
   end
   mod.hooks:wrap('music.select',function(next,chosen,ctx)
