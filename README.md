@@ -1,3 +1,9 @@
+# Tool Battle Music 1.6.3 — Cleaner settings menus
+
+All asset downloaders are grouped under OPTIONS → TOOL MUSIC → DOWNLOAD ASSETS. Press A on settings with four or more choices to open a selectable list starting at the current value; Left/Right still cycle directly. Song lists respect the artist mix setting. Smaller choice sets retain their existing controls.
+
+Validated menu grouping, current selection, persistence, downloader navigation and Left/Right cycling for Gen 1–3 in LuaJIT and Lua 5.3, plus the Gen 3 independent-volume regression suite. Restart after installing.
+
 # Tool Battle Music 1.6.2 — Independent volume
 
 OPTIONS → TOOL MUSIC → TOOL VOLUME controls replacement music from 0–100% in 5% steps, independently of the game music slider, across all eleven games. The default is 100%. The control applies to all Tool Music artist packs, in battles and outside battle. Game music can be muted while replacement music remains audible; TOOL VOLUME at 0% silences replacements without restoring native music.
