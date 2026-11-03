@@ -1,3 +1,7 @@
+# Tool Battle Music 1.6.4 - Launcher compatibility
+
+Allow Gen1Recomp 0.3.54 and newer by removing the upper launcher-version bound. Existing mod ID, saved settings, songs and download packs are retained.
+
 # Tool Battle Music 1.6.3 — Cleaner settings menus
 
 All asset downloaders are grouped under OPTIONS → TOOL MUSIC → DOWNLOAD ASSETS. Press A on settings with four or more choices to open a selectable list starting at the current value; Left/Right still cycle directly. Song lists respect the artist mix setting. Smaller choice sets retain their existing controls.
